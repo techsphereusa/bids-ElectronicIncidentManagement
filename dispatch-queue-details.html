@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dispatch Details - INC12345</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .sidebar {
+      background-color: #343a40;
+      min-height: 100vh;
+      padding-top: 1rem;
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 10px 15px;
+    }
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #495057;
+    }
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .badge-status {
+      font-size: 0.9rem;
+    }
+    .workflow-step {
+      text-align: center;
+    }
+    .workflow-step .icon {
+      font-size: 2rem;
+      color: #0d6efd;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block sidebar text-white">
+      <h5 class="text-white text-center mb-4">IM System</h5>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="dispatch-queue.html" class="active">Dispatch Queue</a>
+      <a href="incident-report.html">Incident Reports</a>
+      <a href="create-incident.html">Create Incident</a>
+      <a href="trespasser-logs.html">Trespasser Logs</a>
+      <a href="mass-notification.html">Mass Notification</a>
+      <a href="reporting.html">Reporting & Analytics</a>
+      <a href="user-management.html">User Management</a>
+      <a href="settings.html">Settings</a>
+      <a href="help.html">Help & Support</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-md-9 col-lg-10 p-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Dispatch Details</h2>
+        <a href="dispatch-queue.html" class="btn btn-outline-secondary">Back to Queue</a>
+      </div>
+
+      <!-- Dispatch Detail Card -->
+      <div class="card p-4 mb-4">
+        <h5 class="mb-3 text-primary">Dispatch ID: INC12345</h5>
+
+        <div class="row mb-3">
+          <div class="col-md-6"><strong>Date & Time:</strong> 2025-05-13 10:32 AM</div>
+          <div class="col-md-6"><strong>Status:</strong> <span class="badge bg-primary badge-status">Open</span></div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6"><strong>Location:</strong> Hall B Entrance</div>
+          <div class="col-md-6"><strong>Currently Assigned To:</strong> Officer Ramirez</div>
+        </div>
+
+        <div class="mb-3">
+          <strong>Description:</strong>
+          <p class="mt-2">
+            Suspicious black bag reported near the Hall B entrance gate. Security team was dispatched for inspection and area was cleared for safety.
+          </p>
+        </div>
+
+        <div class="mb-3">
+          <strong>Actions Taken:</strong>
+          <ul class="mt-2">
+            <li>Officer dispatched immediately.</li>
+            <li>Bag visually inspected with no threat found.</li>
+            <li>Reported to Lost & Found.</li>
+          </ul>
+        </div>
+
+        <div class="mb-4">
+          <strong>Attachment:</strong><br>
+          <img src="https://via.placeholder.com/400x200?text=Suspicious+Bag+Photo" class="img-fluid mt-2 rounded border" alt="Bag Photo">
+        </div>
+      </div>
+
+      <!-- Assigned To History -->
+      <div class="card p-4 mb-4">
+        <h5 class="mb-3 text-secondary">Assigned To History</h5>
+        <ul class="list-group">
+          <li class="list-group-item">2025-05-13 10:33 AM - Assigned to <strong>Officer Ramirez</strong></li>
+          <li class="list-group-item">2025-05-13 10:45 AM - Reassigned to <strong>Officer Lee</strong> for further review</li>
+          <li class="list-group-item">2025-05-13 11:10 AM - Transferred to <strong>Supervisor Gonzales</strong> for clearance</li>
+        </ul>
+      </div>
+
+      <!-- Sample Workflow -->
+      <div class="card p-4 mb-4">
+        <h5 class="mb-3 text-secondary">Dispatch Workflow</h5>
+        <div class="row text-center">
+          <div class="col-6 col-md-3 workflow-step">
+            <div class="icon">📥</div>
+            <p class="mt-2">Reported</p>
+            <small>10:32 AM</small>
+          </div>
+          <div class="col-6 col-md-3 workflow-step">
+            <div class="icon">🚓</div>
+            <p class="mt-2">Dispatched</p>
+            <small>10:33 AM</small>
+          </div>
+          <div class="col-6 col-md-3 workflow-step">
+            <div class="icon">👮‍♂️</div>
+            <p class="mt-2">Officer Assigned</p>
+            <small>10:45 AM</small>
+          </div>
+          <div class="col-6 col-md-3 workflow-step">
+            <div class="icon">✅</div>
+            <p class="mt-2">Cleared</p>
+            <small>11:15 AM</small>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

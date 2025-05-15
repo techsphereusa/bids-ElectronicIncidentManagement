@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit User Role</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .offcanvas {
+      width: 240px;
+    }
+    .sidebar a {
+      color: white;
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #495057;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile Navbar -->
+<nav class="navbar navbar-dark bg-dark d-md-none">
+  <div class="container-fluid">
+    <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+      ☰ Menu
+    </button>
+    <span class="navbar-brand ms-2">IM System</span>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar (Desktop) -->
+    <div class="col-md-3 col-lg-2 d-none d-md-block bg-dark sidebar text-white">
+      <h5 class="text-white text-center mt-3">IM System</h5>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="dispatch-queue.html">Dispatch Queue</a>
+      <a href="incident-report.html">Incident Reports</a>
+      <a href="create-incident.html">Create Incident</a>
+      <a href="trespasser-logs.html">Trespasser Logs</a>
+      <a href="mass-notification.html">Mass Notification</a>
+      <a href="reporting.html">Reporting & Analytics</a>
+      <a href="user-management.html" class="active">User Management</a>
+      <a href="settings.html">Settings</a>
+      <a href="help.html">Help & Support</a>
+      <a href="logout.html">Logout</a>
+    </div>
+
+    <!-- Sidebar (Mobile Offcanvas) -->
+    <div class="offcanvas offcanvas-start bg-dark text-white sidebar" tabindex="-1" id="sidebarMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">IM System</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="dispatch-queue.html">Dispatch Queue</a>
+        <a href="incident-report.html">Incident Reports</a>
+        <a href="create-incident.html">Create Incident</a>
+        <a href="trespasser-logs.html">Trespasser Logs</a>
+        <a href="mass-notification.html">Mass Notification</a>
+        <a href="reporting.html">Reporting & Analytics</a>
+        <a href="user-management.html" class="active">User Management</a>
+        <a href="settings.html">Settings</a>
+        <a href="help.html">Help & Support</a>
+        <a href="logout.html">Logout</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 p-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Edit User Role</h2>
+        <a href="user-management.html" class="btn btn-outline-secondary">← Back to Users</a>
+      </div>
+
+      <!-- Edit Role Form -->
+      <div class="card p-4">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">User ID</label>
+            <input type="text" class="form-control" value="USR1023" disabled>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" value="James Lee" disabled>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="text" class="form-control" value="jlee@sdcc.com" disabled>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="userRole" class="form-label">Role</label>
+            <select class="form-select" id="userRole" required>
+              <option value="admin">Administrator</option>
+              <option value="supervisor" selected>Supervisor</option>
+              <option value="officer">Officer</option>
+              <option value="viewer">Viewer</option>
+            </select>
+          </div>
+
+          <!-- ✅ New Status Field -->
+          <div class="mb-4">
+            <label for="userStatus" class="form-label">Status</label>
+            <select class="form-select" id="userStatus" required>
+              <option value="active" selected>Active</option>
+              <option value="inactive">Inactive</option>
+            </select>
+          </div>
+
+          <div class="d-flex justify-content-end gap-2">
+            <a href="user-management.html" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Update User</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
